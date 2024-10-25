@@ -1,0 +1,34 @@
+/* Selector universal */
+* {
+    
+}
+
+/* Configs generales */
+
+/* Estilo del navbar y elementos */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    height: 10vh;
+}
+
+/* Estilos de los enlaces */
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 10px;
+}
+
+/* Color en mouseover */
+.menu li a:hover {
+    color: #007bff;
+}
+
+
+.carousel-item img {
+    max-height: 82vh;
+    width: auto;
+}
