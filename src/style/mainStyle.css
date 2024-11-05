@@ -1,0 +1,86 @@
+/* Selector universal */
+* {}
+
+/* Configs generales */
+
+/* Estilo del header, navbar y elementos */
+header {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 1px solid darkslategrey;
+}
+
+.headMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 6vw;
+}
+
+.headMenu li a {
+    padding: 5px 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li a:hover {
+    color: gray;
+}
+
+/* Main */
+
+
+/* Imagen de fondo con enlace rellenoso */
+.alwaysClose {
+    filter: grayscale(70%);    
+    transition: filter 0.5s ease, opacity 0.5s ease;
+}
+.alwaysClose:hover {
+    filter: grayscale(0%);
+    opacity: 0.9;    
+}
+
+/* Prefoot */
+.prefootContainer {
+    background-color: black;
+    color: darkslategray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logo column1 column2 subscribeInput";
+    padding: 8vh;
+    height: 33.5vh;
+    border-bottom: 1px solid darkslategrey;
+}
+
+.subscribeInput {
+    height: 2vh;
+}
+
+
+/* Da foot */
+footer {
+    height: 8vh;
+    font-size: 0.8rem;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
