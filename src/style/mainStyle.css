@@ -1,36 +1,20 @@
 /* Selector universal */
-* {}
-
-/* Configs generales */
-
-/* Estilo del header, navbar y elementos */
-header {
-    background-color: black;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    border-bottom: 1px solid darkslategrey;
-}
-
-.headMenu {
+* {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 6vw;
 }
 
-.headMenu li a {
-    padding: 5px 10px;
-}
+/* General text deco */
 
-ul {
-    list-style-type: none;
+@font-face {
+    font-family: 'AngieLove';
+    src: url('../fonts/angela-love-font-duo/AngelaLoveSans.woff') format('woff'),
+         url('../fonts/angela-love-font-duo/AngelaLoveSansOutline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
 }
 
 ul li a {
+    font-family: 'AngieLove';    
     text-decoration: none;
     color: inherit;
 }
@@ -39,39 +23,100 @@ ul li a:hover {
     color: gray;
 }
 
-/* Main */
+/* End general text deco */
 
 
-/* Imagen de fondo con enlace rellenoso */
-.alwaysClose {
-    filter: grayscale(70%);    
-    transition: filter 0.5s ease, opacity 0.5s ease;
+
+/* Configs generales */
+
+/* Header */
+header {
+    /* General */    
+    background-color: black;
+    color: whitesmoke;
+    height: 12vh;
+    border-bottom: 1px solid darkslategrey;
+    /* Distribución */
+    justify-content: center;
+    align-items: center;
+    /* Sticky */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* Grid */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 5vw;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logoMain column2 column3";
 }
-.alwaysClose:hover {
-    filter: grayscale(0%);
-    opacity: 0.9;    
+
+.logoMain {
+    grid-area: logoMain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Prefoot */
-.prefootContainer {
+header a img {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+}
+
+header ul {
+    grid-area: column2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+}
+
+header ul li a {
+    font-size: 1.8rem;
+    padding: 5px 10px;
+}
+
+header div {
+    grid-area: column3;
+}
+
+/* End Header */
+
+
+
+
+
+/* Prefooter config */
+
+.prefooter {
+    /* General */
     background-color: black;
     color: darkslategray;
+    padding: 8vh;
+    height: 33.5vh;
+    border-bottom: 1px solid darkslategrey;
+    /* Grid */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "logo column1 column2 subscribeInput";
-    padding: 8vh;
-    height: 33.5vh;
-    border-bottom: 1px solid darkslategrey;
+        "logoSec column1 column2 subInput";    
+}
+
+.logoSec {
+    border-radius: 50%;
+    height: 20vh;
+    margin: 0 0 0 10em;    
 }
 
 .subscribeInput {
     height: 2vh;
 }
-
 
 /* Da foot */
 footer {
