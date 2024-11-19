@@ -4,25 +4,36 @@
 }
 
 /* General text deco */
-
 @font-face {
     font-family: 'AngieLove';
-    src: url('../fonts/angela-love-font-duo/AngelaLoveSans.woff') format('woff'),
-         url('../fonts/angela-love-font-duo/AngelaLoveSansOutline.woff') format('woff');
+    src: url('../fonts/angela-love-font-duo/AngelaLoveSans.woff') format('woff');
     font-weight: normal;
     font-style: normal;    
 }
-
-ul li a {
-    font-family: 'AngieLove';    
-    text-decoration: none;
-    color: inherit;
+@font-face {
+    font-family: 'AngieLoveOutline';
+    src: url('../fonts/angela-love-font-duo/AngelaLoveSansOutline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-ul li a:hover {
+.navLink {        
+    color: darkslategrey;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    
+}
+.navLink:hover {
     color: gray;
 }
 
+
+
+
+.lisTitles {
+    font-family: 'AngieLove';
+    font-size: 1.5em;    
+}
 /* End general text deco */
 
 
@@ -60,9 +71,9 @@ header {
     justify-content: center;
 }
 
-header a img {
-    width: 6em;
-    height: 6em;
+.logoMain img {
+    width: 5em;
+    height: 5em;
     border-radius: 50%;
 }
 
@@ -77,6 +88,7 @@ header ul {
 header ul li a {
     font-size: 1.8rem;
     padding: 5px 10px;
+    color: whitesmoke !important;
 }
 
 header div {
@@ -84,11 +96,6 @@ header div {
 }
 
 /* End Header */
-
-
-
-
-
 /* Prefooter config */
 
 .prefooter {
@@ -108,14 +115,20 @@ header div {
         "logoSec column1 column2 subInput";    
 }
 
+.column1 p, .column2 p {
+    margin: 0 0 0.5em 0;    
+}
+.column1 ul, .column2 ul {    
+    padding: 0;
+}
+.column1 ul li, .column2 ul li {
+    margin: 0 0 0.2em 0;
+}
+
 .logoSec {
     border-radius: 50%;
     height: 20vh;
     margin: 0 0 0 10em;    
-}
-
-.subscribeInput {
-    height: 2vh;
 }
 
 /* Da foot */
